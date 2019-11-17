@@ -3,18 +3,19 @@
         <div class="block-title text-center">
             <div class="block-title__text"><span><?=lang("pricing")?></span> <br> <span><?=lang('pick_the_best_plan_for_you')?></span></div><!-- /.block-title__text -->
         </div><!-- /.block-title -->
-        <ul class="nav nav-tabs tab-title" id="pills-tab" role="tablist">
+        <!-- <ul class="nav nav-tabs tab-title" id="pills-tab" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="pills-month-tab" data-toggle="pill" href="#pills-month" role="tab" aria-controls="pills-month" aria-selected="true"><?=lang("monthly")?></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-year-tab" data-toggle="pill" href="#pills-year" role="tab" aria-controls="pills-year" aria-selected="false"><?=lang("yearly")?></a>
             </li>
-        </ul>
+        </ul> -->
         <div class="tab-content">
 	        <div class="tab-pane fade show active" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
 		        <div class="row">
 			        <?php if(!empty($package)){
+					$i = 0;
 			        $social_list = load_social_list();
 			        foreach ($package as $key => $row) {
 			            $pricing_monthly = number_format($row->price_monthly,2);
@@ -30,13 +31,21 @@
 			                    $social_list_permission[] = $name;
 			                }
 			            }
-			            $social_count = count($social_list_permission);
+						$social_count = count($social_list_permission);
+						$i++;
 			         ?>
 		            <div class="col-lg-4">
 		                <div class="pricing-one__single">
 		                    <div class="pricing-one__top">
-								<?php echo "aaaaaa";?>
-		                        <h3 class="pricing-one__title">$<?=$pricing_monthly_explode[0]?>.<?=$pricing_monthly_explode[1]?> <sup><?=get_option('payment_symbol','$')?></h3>
+								<h3 class="pricing-one__title">$<?=$pricing_monthly_explode[0]?>.<?=$pricing_monthly_explode[1]?> <sup><?=get_option('payment_symbol','$')?></h3>
+								<p class="switch-block">
+									<span class="pricing-pill-radio">
+										<label><input type="radio" name="pricing-switch-radio-<?=$i?>" checked >Monthly</label>
+									</span>
+									<span class="pricing-pill-radio">
+										<label><input type="radio" name="pricing-switch-radio-<?=$i?>">Yearly</label>
+									</span>
+								</p>
 		                        <p class="pricing-one__pack"><?=$row->name?></p><!-- /.pricing-one__pack -->
 		                        <small><?=lang("per_active_user_monthly")?></small>
 		                        <small class="text-warning"><?=sprintf(lang("save_x_on_annually"), $pricing_discount." ".get_option('payment_currency'));?></small>
@@ -75,9 +84,14 @@
 			                        <?php }?>
 			                    </li>
 			                    <li class="pricing-one__feature-item"> <?=lang('max_storage_size_ouput')?> <strong class="text-primary"><?=get_value($permission, "max_storage_size")?> <?=lang("mb")?></strong></li>
-			                    <li class="pricing-one__feature-item"> <?=lang('max_file_size_output')?> <strong class="text-primary"><?=get_value($permission, "max_file_size")?> <?=lang("mb")?></strong></li>
+								<li class="pricing-one__feature-item"> <?=lang('max_file_size_output')?> <strong class="text-primary"><?=get_value($permission, "max_file_size")?> <?=lang("mb")?></strong></li>
+								<li class="pricing-one__feature-item"> <?=lang('add_new_followers_per_day')?> <strong class="text-primary"><?=get_value($permission, "add_new_followers_per_day")?> </strong></li>
+								<?php //if ($i == 3) { ?>
+									<li class="pricing-one__feature-item"> <?=lang('image_library')?> <strong class="text-primary"> </strong></li>
+									<li class="pricing-one__feature-item"> <?=lang('private_group_live_training')?> <strong class="text-primary"> </strong></li>
+								<?php //}?>
 		                    </ul><!-- /.pricing-one__feature -->
-		                    <a href="<?=(session("uid"))?cn('payment/'.$row->ids.'?type=1'):cn("auth/login?redirect=payment/".$row->ids.'?type=1')?>" class="pricing-one__btn"><?=lang('upgrade_now')?></a>
+		                    <a href="<?=(session("uid"))?cn('payment/'.$row->ids.'?type=1'):cn("auth/login?redirect=payment/".$row->ids.'?type=1')?>" class="pricing-one__btn"><?=lang('start_now')?></a>
 		                </div><!-- /.pricing-one__single -->
 		            </div><!-- /.col-lg-4 -->
 		            <?php }}?>

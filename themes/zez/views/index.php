@@ -160,25 +160,6 @@
 	    <?php }?>
         <!--Pricing End-->
 
-		<!--Try Now-->
-		<section class="trynow site-footer">
-			<img src="<?=BASE?>themes/zez/assets/img/banner-icon-1-11.png" class="bubble-1" />
-            <img src="<?=BASE?>themes/zez/assets/img/banner-icon-1-12.png" class="bubble-2" />
-            <div class="site-footer__subscribe">
-                <div class="container">
-                    <div class="block-title text-center">
-                        <div class="block-title__text"><span><?=lang("ready_to_try")?></span> <br> <p class="banner-one__text"><?=lang("Start your free trial. Are you ready to try service reign? ! No contract. No credit card.")?></p></div><!-- /.block-title__text -->
-                    </div><!-- /.block-title -->
-                    <form action="<?=cn("auth/signup")?>" method="get" class="site-footer__subscribe-form">
-                        <input type="text" placeholder="<?=lang("enter_your_email")?>" name="email" aria-describedby="basic-addon2">
-                        <button type="submit"><?=lang("get_start_now")?></button>
-                    </form><!-- /.subscribe-form -->
-                    <p class="text-center banner-one__text"><?=lang("do_not_hesitate_to_try_it_out_with_just_a_few_minutes_of_setup")?></p>
-                </div><!-- /.container -->
-            </div><!-- /.site-footer__subscribe -->
-		</section>
-		<!--Try Now End-->
-	</main>
-	<!-- Main End -->
+		
 
 <?=Modules::run(get_theme()."/footer")?>

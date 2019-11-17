@@ -2025,7 +2025,8 @@ hr.style-one {
   background-color: white;
   -webkit-box-shadow: 0px 10px 60px 0px rgba(46, 61, 98, 0.1);
           box-shadow: 0px 10px 60px 0px rgba(46, 61, 98, 0.1);
-  border-top: 5px solid #9364D4;
+  border: 1px solid #0707ef;
+  border-top-width: 5px ;
 }
 .pricing-one__top {
   border-bottom: 1px solid #E8E8E8;
@@ -2039,7 +2040,7 @@ hr.style-one {
 
 .pricing-one__title {
   margin: 0;
-  color: #9364D4;
+  color: #7d71e0;
   font-size: 60px;
   font-weight: 300;
   line-height: 1em;
@@ -2089,8 +2090,8 @@ hr.style-one {
   transition: all .4s ease;
 }
 .pricing-one__btn:hover {
-  border-color: #9364D4;
-  background-color: #9364D4;
+  border-color: #7d71e0;
+  background-color: #7d71e0;
   color: #fff;
 }
 .pricing-one__note {
@@ -2126,26 +2127,33 @@ small.text-warning {
     margin-top: -15px;
 }
 
+
 [class*=col-]:nth-child(2) .pricing-one__single {
-  border-top-color: #EE539B;
+  border-color: #0ee20e;
+  margin-top: -16px;
 }
+
+[class*=col-]:nth-child(2) .pricing-one__single .pricing-one__top {
+  padding-top: 67px;
+}
+
 [class*=col-]:nth-child(2) .pricing-one__title {
-  color: #EE539B;
+  color: #0ee20e;
 }
 [class*=col-]:nth-child(2) .pricing-one__btn:hover {
-  background-color: #EE539B;
-  border-color: #EE539B;
+  background-color: #0ee20e;
+  border-color: #0ee20e;
 }
 
 [class*=col-]:nth-child(3) .pricing-one__single {
-  border-top-color: #FDDD6E;
+  border-color: #980c98;
 }
 [class*=col-]:nth-child(3) .pricing-one__title {
-  color: #FDDD6E;
+  color: #980c98;
 }
 [class*=col-]:nth-child(3) .pricing-one__btn:hover {
-  background-color: #FDDD6E;
-  border-color: #FDDD6E;
+  background-color: #980c98;
+  border-color: #980c98;
 }
 li.pricing-one__feature-item.no {
     text-decoration: line-through;
@@ -3180,4 +3188,22 @@ li.pricing-one__feature-item.no {
 
 .icon-live_tv-1 img {
   height: 70px;
+}
+
+.switch-block {
+  margin-bottom: 0;
+}
+
+.pricing-pill-radio {
+  padding: 0 10px;
+}
+
+.pricing-pill-radio label {
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+
+.pricing-pill-radio input {
+  margin-right: 5px;
 }
