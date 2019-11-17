@@ -2031,19 +2031,15 @@ hr.style-one {
 .pricing-one__top {
   border-bottom: 1px solid #E8E8E8;
   padding-top: 50px;
-  background-color: #111111;
-}
-
-.pricing-one__top small {
-  color: #ffffff;
 }
 
 .pricing-one__title {
   margin: 0;
-  color: #7d71e0;
+  color: #000000;
   font-size: 60px;
   font-weight: 300;
   line-height: 1em;
+  margin-bottom: 95px;
 }
 .pricing-one__pack {
   margin: 0;
@@ -2054,7 +2050,6 @@ hr.style-one {
   letter-spacing: .2em;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #ffffff;
 }
 .pricing-one__feature {
 	margin: 0;
@@ -2137,9 +2132,6 @@ small.text-warning {
   padding-top: 67px;
 }
 
-[class*=col-]:nth-child(2) .pricing-one__title {
-  color: #0ee20e;
-}
 [class*=col-]:nth-child(2) .pricing-one__btn:hover {
   background-color: #0ee20e;
   border-color: #0ee20e;
@@ -2148,9 +2140,7 @@ small.text-warning {
 [class*=col-]:nth-child(3) .pricing-one__single {
   border-color: #980c98;
 }
-[class*=col-]:nth-child(3) .pricing-one__title {
-  color: #980c98;
-}
+
 [class*=col-]:nth-child(3) .pricing-one__btn:hover {
   background-color: #980c98;
   border-color: #980c98;
@@ -2188,7 +2178,7 @@ li.pricing-one__feature-item.no {
     outline: none;
     color: #86909E;
     display: inline-block;
-    padding: 14px 33.5px;
+    padding: 4px 33.5px;
     cursor: pointer;
     color: #777B92;
     font-size: 18px;
@@ -3200,10 +3190,25 @@ li.pricing-one__feature-item.no {
 
 .pricing-pill-radio label {
   margin-bottom: 0;
-  color: #ffffff;
 }
 
 
 .pricing-pill-radio input {
   margin-right: 5px;
 }
+
+#pricing .pricing-relative {
+  position: relative;
+}
+
+#pricing .pricing-relative .tab-title{
+  position: absolute;
+  top: 130px;
+  left: 16%;
+  z-index: 10;
+}
+
+#pricing .pricing-relative .tab-content{
+  position: relative;
+}
+

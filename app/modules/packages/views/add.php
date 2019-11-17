@@ -17,6 +17,7 @@
                             <label for="name"><?=lang("name")?></label>
                             <input type="text" class="form-control" name="name" id="name" value="<?=!empty($result)?$result->name:""?>">
                         </div>
+                       
                         <?php if($result->type==2){?>
                         <div class="form-group">
                             <label for="description"> <?=lang('description')?></label>
@@ -79,7 +80,12 @@
                         <input type="number" class="form-control" name="sort" id="sort" value="<?=!empty($result)?$result->sort:"0"?>">
                     </div>
                     <?php }?>
-                    
+
+                    <div class="form-group">
+                        <label for="add_followers"><?=lang("Add_new_followers_per_day")?></label>
+                        <input type="text" class="form-control" name="add_followers" id="add_followers" value="<?=( !empty($permission) && isset($permission['add_followers']) )?(float)$permission['add_followers']:"0"?>">
+                    </div>
+
                     <div class="form-group">
                         <label for="number_accounts"> <?=lang('number_of_social_accounts_on_each_platform')?></label>
                         <input type="number" class="form-control" name="number_accounts" id="number_accounts" value="<?=!empty($result)?$result->number_accounts:"0"?>">
@@ -156,6 +162,30 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="pure-checkbox grey mr15 mb15">
+                                    <input type="checkbox" id="md_checkbox_image_library" name="image_library" class="filled-in chk-col-red" value="image_library" <?=in_array('image_library',$permission, true)?"checked":""?>>
+                                    <label class="p0 m0" for="md_checkbox_image_library">&nbsp;</label>
+                                    <span class="checkbox-text-right">  <?=lang('image_library')?></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="pure-checkbox grey mr15 mb15">
+                                    <input type="checkbox" id="md_checkbox_private_group" name="private_group" class="filled-in chk-col-red" value="private_group" <?=in_array('private_group',$permission, true)?"checked":""?>>
+                                    <label class="p0 m0" for="md_checkbox_private_group">&nbsp;</label>
+                                    <span class="checkbox-text-right">  <?=lang('private_group')?></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pure-checkbox grey mr15 mb15">
+                            <input type="checkbox" id="md_checkbox_growth_building_webinar" name="growth_building_webinar" class="filled-in chk-col-red" value="growth_building_webinar" <?=in_array('growth_building_webinar',$permission, true)?"checked":""?>>
+                            <label class="p0 m0" for="md_checkbox_growth_building_webinar">&nbsp;</label>
+                            <span class="checkbox-text-right">  <?=lang('growth_building_webinar')?></span>
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 <?php 
 $permission = array();
+
 if(!empty($result)){
     $permission = (array)json_decode($result->permission);
 }

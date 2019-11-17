@@ -59,16 +59,19 @@ class packages extends MX_Controller {
 		$price_monthly   = (float)post("price_monthly");
 		$price_annually  = (float)post("price_annually");
 		$number_accounts = (int)post("number_accounts");
+		$add_followers   =  (int)post("add_followers");
 		$sort            = (int)post("sort");
 		$max_storage_size= (float)post("max_storage_size");
 		$max_file_size   = (float)post("max_file_size");
 		$watermark       = post("watermark");
 		$image_editor    = post("image_editor");
+		$image_library   = post("image_library");
+		$private_group   = post("private_group");
+		$growth_building_webinar   = post("growth_building_webinar");
 		$permission_list = $this->input->post('permission[]');
 		$file_pickers = $this->input->post('file_pickers[]');
 		$file_types = $this->input->post('file_types[]');
 		$status          = (int)post("status");
-
 		if($name == "" && !post("trial_day")){
 			ms(array(
 				"status"  => "error",
@@ -95,11 +98,16 @@ class packages extends MX_Controller {
 			}
 		}
 
+		$permission['add_followers'] = $add_followers;
 		$permission['max_storage_size'] = $max_storage_size;
 		$permission['max_file_size'] = $max_file_size;
 		$permission['watermark'] = $watermark;
 		$permission['image_editor'] = $image_editor;
+		$permission['image_library'] = $image_library;
+		$permission['private_group'] = $private_group;
+		$permission['growth_building_webinar'] = $growth_building_webinar;
 
+		
 		$data = array(
 			
 			'description'     => $description,

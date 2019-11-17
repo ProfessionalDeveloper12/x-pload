@@ -66,7 +66,6 @@ if(file_exists($theme_config)){
 if (!defined('CUSTOM_PAGE')) {
     define("CUSTOM_PAGE", "general_custom_page");
 }
-
 $route["default_controller"] = $theme;
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
