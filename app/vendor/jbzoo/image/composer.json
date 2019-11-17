@@ -1,0 +1,51 @@
+{
+    "name"              : "jbzoo/image",
+    "type"              : "library",
+    "description"       : "A PHP class that simplifies working with images (fork abeautifulsite/simpleimage)",
+    "license"           : "MIT",
+    "keywords"          : ["image", "resize", "images", "jbzoo", "crop", "filters", "thumbnail", "watermark", "gd"],
+    "minimum-stability" : "stable",
+    "authors"           : [
+        {
+            "name"     : "Cory LaViska",
+            "homepage" : "http://www.abeautifulsite.net/",
+            "role"     : "Developer"
+        },
+        {
+            "name"     : "Nazar Mokrynskyi",
+            "email"    : "nazar@mokrynskyi.com",
+            "homepage" : "http://cleverstyle.org/",
+            "role"     : "Developer"
+        },
+        {
+            "name"     : "SmetDenis",
+            "email"    : "denis@jbzoo.com",
+            "homepage" : "http://jbzoo.com/",
+            "role"     : "Developer"
+        }
+    ],
+    "require"           : {
+        "php"         : ">=5.3.10",
+        "ext-gd"      : "*",
+        "jbzoo/utils" : "^1.4"
+    },
+    "require-dev"       : {
+        "jbzoo/phpunit" : "^1.7"
+    },
+    "autoload"          : {
+        "psr-4" : {
+            "JBZoo\\Image\\" : "src"
+        }
+    },
+    "extra"             : {
+        "branch-alias" : {
+            "dev-master" : "3.x-dev"
+        }
+    },
+    "config"            : {
+        "optimize-autoloader" : true
+    },
+    "support"           : {
+        "issues" : "https://github.com/JBZoo/Image/issues"
+    }
+}

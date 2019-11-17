@@ -1,0 +1,1 @@
+<video src="<?=$video?>" autoplay="" loop="" controls></video>

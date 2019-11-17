@@ -1,0 +1,44 @@
+body{
+	color: #120705;
+	background: #fff!important;
+    font-family: Montserrat,Georgia,'Times New Roman',Times,serif;
+}
+
+/*section-thankyou*/
+.section-tk{
+	margin-top: 70px;
+	font-size: 18px;
+}
+
+.section-tk .icon{
+	font-size: 120px;
+}
+.section-tk .icon.success{
+	color: #0CC27E;
+}
+.section-tk .icon.error{
+    color: #e67171;
+}
+
+.section-tk p.title{
+	font-weight: 700;
+	font-size: 3.5em;
+}
+.section-tk p.order{
+    background: #efefef;
+    border: 2px solid #efefef;
+    opacity: 0.8;
+    border-radius: 13px;
+    display: inline-block;
+    padding: 0 10px;
+}
+.section-tk p.desc,.section-tk p.sign{
+	margin-top: 10px;
+	opacity: 0.8;
+}
+.section-tk p.sign{
+}
+.section-tk a.btn {
+	margin-top: 20px;
+	border-radius: 50px;
+}

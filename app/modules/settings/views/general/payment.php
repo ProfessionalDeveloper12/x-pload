@@ -1,0 +1,1 @@
+<?=Modules::run("payment/block_general_settings")?>
