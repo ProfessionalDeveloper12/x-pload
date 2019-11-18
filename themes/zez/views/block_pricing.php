@@ -9,7 +9,6 @@
 		        <div class="row">
 			        <?php if(!empty($package)){
 					$i = 0;
-					// echo json_encode ($package);
 			        $social_list = load_social_list();
 			        foreach ($package as $key => $row) {
 
@@ -86,7 +85,7 @@
 										<li class="pricing-one__feature-item"> <?=lang('max_file_size_output')?> <strong class="text-primary"><?=get_value($permission, "max_file_size")?> <?=lang("mb")?></strong></li>
 										<li class="pricing-one__feature-item"> <?=lang('add_new_followers_per_day')?> <strong class="text-primary"><?=get_value($permission, "add_followers")?> </strong></li>
 										<li class="pricing-one__feature-item <?=in_array("image_library", $permission)?"":"no"?>"> <?=lang('image_library')?> </li>
-										<li class="pricing-one__feature-item <?=in_array("private_group", $permission)?"":"no"?>"> <?=lang('private_group_live_training')?></li>
+										<li class="pricing-one__feature-item <?=in_array("private_group", $permission)?"":"no"?>"> <?=lang('private_group')?></li>
 										<li class="pricing-one__feature-item <?=in_array("growth_building_webinar", $permission)?"":"no"?>"> <?=lang('private_weekly_growth_building_webinar')?></li>
 
 									</ul><!-- /.pricing-one__feature -->
@@ -139,7 +138,7 @@
 										<li class="pricing-one__feature-item"> <?=lang('max_file_size_output')?> <strong class="text-primary"><?=get_value($permission, "max_file_size")?> <?=lang("mb")?></strong></li>
 										<li class="pricing-one__feature-item"> <?=lang('add_new_followers_per_day')?> <strong class="text-primary"><?=get_value($permission, "add_followers")?> </strong></li>
 										<li class="pricing-one__feature-item <?=in_array("image_library", $permission)?"":"no"?>"> <?=lang('image_library')?> </li>
-										<li class="pricing-one__feature-item <?=in_array("private_group", $permission)?"":"no"?>"> <?=lang('private_group_live_training')?></li>
+										<li class="pricing-one__feature-item <?=in_array("private_group", $permission)?"":"no"?>"> <?=lang('private_group')?></li>
 										<li class="pricing-one__feature-item <?=in_array("growth_building_webinar", $permission)?"":"no"?>"> <?=lang('private_weekly_growth_building_webinar')?></li>
 
 									</ul><!-- /.pricing-one__feature -->

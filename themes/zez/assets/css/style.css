@@ -2031,15 +2031,20 @@ hr.style-one {
 .pricing-one__top {
   border-bottom: 1px solid #E8E8E8;
   padding-top: 50px;
+  background-color: white;
+}
+
+.pricing-one__top small {
+  color: black;
 }
 
 .pricing-one__title {
   margin: 0;
-  color: #000000;
+  color: black;
   font-size: 60px;
   font-weight: 300;
   line-height: 1em;
-  margin-bottom: 95px;
+  margin-bottom:95px;
 }
 .pricing-one__pack {
   margin: 0;
@@ -2050,6 +2055,7 @@ hr.style-one {
   letter-spacing: .2em;
   margin-top: 20px;
   margin-bottom: 10px;
+  color: black;
 }
 .pricing-one__feature {
 	margin: 0;
@@ -2132,6 +2138,9 @@ small.text-warning {
   padding-top: 67px;
 }
 
+[class*=col-]:nth-child(2) .pricing-one__title {
+  color: black;
+}
 [class*=col-]:nth-child(2) .pricing-one__btn:hover {
   background-color: #0ee20e;
   border-color: #0ee20e;
@@ -2140,7 +2149,9 @@ small.text-warning {
 [class*=col-]:nth-child(3) .pricing-one__single {
   border-color: #980c98;
 }
-
+[class*=col-]:nth-child(3) .pricing-one__title {
+  color: black;
+}
 [class*=col-]:nth-child(3) .pricing-one__btn:hover {
   background-color: #980c98;
   border-color: #980c98;
@@ -2591,6 +2602,10 @@ li.pricing-one__feature-item.no {
           transform: translate(-60%, 60%);
 }
 .service-one__icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
   font-size: 60px;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
@@ -2775,6 +2790,10 @@ li.pricing-one__feature-item.no {
           transform: translate(-60%, 60%);
 }
 .service-one__icon1 {
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
   font-size: 60px;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
@@ -3170,6 +3189,9 @@ li.pricing-one__feature-item.no {
 
 .icon-linegraph-1 img {
   height: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .icon-strategy-1 img {
@@ -3180,22 +3202,8 @@ li.pricing-one__feature-item.no {
   height: 70px;
 }
 
-.switch-block {
-  margin-bottom: 0;
-}
-
-.pricing-pill-radio {
-  padding: 0 10px;
-}
-
-.pricing-pill-radio label {
-  margin-bottom: 0;
-}
 
 
-.pricing-pill-radio input {
-  margin-right: 5px;
-}
 
 #pricing .pricing-relative {
   position: relative;
@@ -3204,11 +3212,12 @@ li.pricing-one__feature-item.no {
 #pricing .pricing-relative .tab-title{
   position: absolute;
   top: 130px;
-  left: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
   z-index: 10;
 }
 
 #pricing .pricing-relative .tab-content{
   position: relative;
 }
-
